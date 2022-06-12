@@ -1,0 +1,44 @@
+{% extends 'employee_registry/main.html' %}
+
+{% block content %}
+
+   
+
+   <h2 class="text-weight-bold text-center">Employee Profile Info</h2>
+      <hr>
+
+   <table class="table table-bordered table-striped table-dark table-hover">
+
+      <thead class="text-weight-bold">
+          <tr>
+              <td>Name</td>
+              <td>Age</td>
+              <td>Gender</td>
+              <td>Position</td>
+              <td>Phone</td>
+              <td>Email</td>
+              <td>Address</td>
+          </tr>
+      </thead>
+
+      <tbody>
+          <tr>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.age }}</td>
+            <td>{{ employee.gender }}</td>
+            <td>{{ employee.position }}</td>
+            <td>{{ employee.phone }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.address }}</td>
+          </tr>
+      </tbody>
+
+   </table>
+
+   <hr> 
+
+<div class="text-right">
+    <a class="btn btn-sm btn-info" href="{% url 'list' %}">Back to List</a>
+</div>
+
+{% endblock %}
